@@ -1,0 +1,152 @@
+/* Pricing Section Styles */
+.pricing-section {
+  position: relative;
+  background: linear-gradient(135deg, #fce4f3 0%, #e9d5ff 100%);
+  background: url('../assets/pricing-card-background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.pricing-section::before,
+.pricing-section::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.pricing-section::before {
+  width: 300px;
+  height: 300px;
+  background-color: #e9437a;
+  top: -100px;
+  left: -150px;
+}
+
+.pricing-section::after {
+  width: 400px;
+  height: 400px;
+  background-color: #6c64f8;
+  bottom: -200px;
+  right: -200px;
+}
+
+/* Toggle Button Styles */
+.billing-toggle-container {
+  display: inline-flex;
+  position: relative;
+}
+
+.MuiToggleButtonGroup-root {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.MuiToggleButton-root {
+  text-transform: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.MuiToggleButton-root.active {
+  background-color: #6c64f8;
+  color: white;
+}
+
+.MuiToggleButton-root.active:hover {
+  background-color: #5e57d9;
+}
+
+/* Save Badge Animation */
+.save-badge {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(12deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(12deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(12deg) translateY(0px);
+  }
+}
+
+/* Card Styles */
+.MuiCard-root {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Price Display */
+.MuiTypography-h3 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* Custom Check Icon */
+.MuiSvgIcon-root.MuiSvgIcon-colorPrimary {
+  color: #e9437a;
+}
+
+/* "Get Started Free" Button */
+.MuiButton-contained {
+  box-shadow: 0 4px 12px rgba(253, 223, 64, 0.4);
+  transition: all 0.3s ease;
+}
+
+.MuiButton-contained:hover {
+  box-shadow: 0 6px 16px rgba(253, 223, 64, 0.5);
+  transform: translateY(-2px);
+}
+
+/* See All Features Button */
+.MuiButton-outlined {
+  border-width: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.MuiButton-outlined:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .pricing-section::before {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -100px;
+  }
+  
+  .pricing-section::after {
+    width: 250px;
+    height: 250px;
+    bottom: -125px;
+    right: -125px;
+  }
+
+  .MuiTypography-h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .MuiToggleButton-root {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Popular card styling */
+.MuiCard-root[style*="border: 2px solid"] {
+  border: 2px solid #e9437a !important;
+} 

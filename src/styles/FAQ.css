@@ -1,0 +1,44 @@
+/* FAQ section styling */
+.faq-section {
+  position: relative;
+}
+
+/* Remove focus outlines */
+.faq-section *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove blue outline on mobile tap */
+.faq-section * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom styling for the accordion when expanded */
+.MuiAccordion-root.Mui-expanded {
+  margin: 0 0 16px 0 !important;
+}
+
+/* Override default MUI accordion styling */
+.MuiAccordion-root {
+  border-radius: 8px !important;
+}
+
+/* Ensure hover state looks good */
+.MuiAccordionSummary-root:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Prevent outline on accordion */
+.MuiAccordion-root:focus-visible {
+  outline: none !important;
+}
+
+.MuiAccordionSummary-root:focus-visible {
+  outline: none !important;
+}
+
+/* Style for the pink background when expanded */
+.pink-bg {
+  background-color: #fef6fa !important;
+} 

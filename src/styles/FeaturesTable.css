@@ -1,0 +1,247 @@
+/* Features Table Section Styles */
+.features-table-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+/* Subtle background styling */
+.features-table-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgba(240, 240, 250, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+/* Container styling */
+.features-table-section .MuiContainer-root {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px !important;
+}
+
+/* Table container styling */
+.features-table-section .MuiTableContainer-root {
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: auto;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Table styling */
+.features-table-section .MuiTable-root {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Cell styling */
+.features-table-section .MuiTableCell-root {
+  border: none !important;
+}
+
+/* Header row styling */
+.features-table-section .MuiTableHead-root .MuiTableRow-root {
+  background-color: #f9f9f9;
+}
+
+/* Row styling - alternating colors */
+.features-table-section .odd-row {
+  background-color: #f5f5f5;
+}
+
+.features-table-section .even-row {
+  background-color: #ffffff;
+}
+
+/* Feature cells styling */
+.features-table-section .feature-cell {
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 500;
+  color: #333;
+  width: 350px;
+}
+
+/* Value cells styling */
+.features-table-section .value-cell {
+  background-color: transparent !important;
+  text-align: center;
+  width: auto;
+}
+
+/* All cells in a row should have the same background color */
+.features-table-section .odd-row td,
+.features-table-section .odd-row th {
+  background-color: #f5f5f5 !important;
+}
+
+.features-table-section .even-row td,
+.features-table-section .even-row th {
+  background-color: #ffffff !important;
+}
+
+/* Checkmark styling */
+.features-table-section .MuiSvgIcon-root[data-testid="CheckIcon"] {
+  color: #e9437a !important;
+  font-size: 1.25rem;
+}
+
+/* Close icon styling */
+.features-table-section .MuiSvgIcon-root[data-testid="CloseIcon"] {
+  color: #999 !important;
+  font-size: 1.25rem;
+}
+
+/* Row height */
+.features-table-section .MuiTableBody-root .MuiTableRow-root {
+  height: 56px; /* Fixed height for rows */
+}
+
+/* Section heading styling */
+.features-table-section .MuiTypography-h2 {
+  margin-bottom: 40px;
+  color: #000;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features-table-section .MuiTypography-h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #8B92FF 0%, #9EA7FF 100%);
+  border-radius: 3px;
+}
+
+/* Equal distribution of columns */
+.comparison-table .MuiTable-root {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Header cell styling */
+.features-table-section .header-cell {
+  text-align: center;
+  min-width: 175px;
+}
+
+/* Make sure the feature column is correctly sized */
+.features-table-section .feature-cell {
+  width: 350px;
+  min-width: 350px;
+}
+
+/* Hover effect on rows */
+.features-table-section .MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: rgba(233, 67, 122, 0.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .features-table-section {
+    padding: 40px 0;
+  }
+  
+  .features-table-section .MuiTableCell-root {
+    padding: 12px 16px;
+  }
+  
+  .features-table-section .feature-cell {
+    width: 250px;
+    min-width: 250px;
+    padding-left: 16px;
+  }
+  
+  .features-table-section .header-cell {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-table-section .MuiTableContainer-root {
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .features-table-section .feature-cell {
+    width: 180px;
+    min-width: 180px;
+    padding-left: 12px;
+  }
+  
+  .features-table-section .header-cell {
+    min-width: 130px;
+  }
+  
+  .features-table-section .MuiTableBody-root .MuiTableRow-root {
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-table-section {
+    padding: 30px 0;
+  }
+  
+  .features-table-section .MuiTableCell-root {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .features-table-section .MuiTableHead-root .MuiTableCell-root .MuiTypography-subtitle1 {
+    font-size: 0.75rem;
+  }
+  
+  .features-table-section .MuiTableHead-root .MuiTableCell-root .MuiTypography-root {
+    font-size: 0.875rem;
+  }
+  
+  .features-table-section .MuiTableContainer-root {
+    margin: 0 -8px;
+    width: calc(100% + 16px);
+    border-radius: 0;
+  }
+  
+  .features-table-section .MuiTableBody-root .MuiTableCell-root[style*="color: #e9437a"] {
+    font-size: 0.8rem;
+  }
+  
+  .features-table-section .MuiSvgIcon-root {
+    font-size: 1rem;
+  }
+  
+  .features-table-section .feature-cell {
+    width: 130px;
+    min-width: 130px;
+    padding-left: 8px;
+  }
+  
+  .features-table-section .header-cell {
+    min-width: 100px;
+  }
+}
+
+/* Accessibility enhancement */
+.MuiTableRow-root:focus-within {
+  outline: 2px solid #e9437a;
+  outline-offset: -2px;
+} 

@@ -1,0 +1,38 @@
+/* Demo Section Styling */
+.demo-section {
+  position: relative;
+}
+
+/* Animation for the HIVE background text */
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+.demo-section .background-text {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hover effect for the button */
+.demo-section .demo-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Shadow for the laptop image */
+.demo-section .laptop-image {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.demo-section .laptop-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+} 
